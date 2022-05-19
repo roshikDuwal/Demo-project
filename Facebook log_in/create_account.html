@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital@1&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container1">
+        <h3>Sign Up</h3>
+        <hr>
+        
+
+       
+    <form id="Signup_form" >
+        <input type="text" name="firstname" id="First_name_id" placeholder="First name" required>
+        <br>
+        <input type="text" name="lastname" id="Last_name_id" placeholder="Last name" required>
+        <br>
+        <input type="email" name="email" id="emailcreate_id" placeholder="Email Address" required>
+        <br>
+        <input type="password" autocomplete="cc-number"  name="password" id="Passwordcreate_id" placeholder="Password" required>
+        <br>
+        <hr>
+        <button type="submit" onclick="save()" id="Sign_up_btn">Sign Up</button>
+    </form>  
+
+    <input type="button" value="Back" id="login_btn" onclick="Back()">
+    </div>
+
+    <script src="login.js"></script>
+    
+</body>
+</html>

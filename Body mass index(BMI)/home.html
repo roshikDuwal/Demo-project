@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI</title>
+    <style>
+        .aligntext{
+            text-align: end;
+            padding: 5px 10px;
+        }
+        body{
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(175, 175, 228);
+
+        }
+
+        h3{
+            font-size: 30px;
+        }
+
+        .container{
+            background-color: bisque;
+            padding: 10px;
+            border: 2px solid bisque;
+            border-radius: 20px;
+        }
+
+        .Title{
+            font-size: 20px;
+            font-family:  monospace;
+            font-weight: 900;
+        }
+
+        .span{
+            font-weight: 400;
+        }
+
+        .btn_style{
+            background-color: rgb(58, 155, 58);
+            color: white;
+            border-radius: 10px;
+            padding: 10px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="Form">
+            <h3>BMI CALCULATOR(Body Mass Index)</h3>
+            
+            <label class="Title">Weight</label> <br>
+            <input type="number" class="aligntext" name="" required id="weight" ><span>KG</span>
+            <br>
+            <label class="Title">Height</label> <br>
+            <input type="number" class="aligntext" name="" required id="height" ><span>feet</span>
+            <br>
+            <br>
+            <input type="button" class="btn_style" class="aligntext" value="Check BMI" onclick="btn()">
+            <hr>
+            <label class="Title">BMI value:</label> <br>
+            <input type="text" class="aligntext" name="" id="bmi_value">
+            <p id="Result">____________</p>
+            
+            <input type="button" value="Clear" class="btn_style" id="clear" onclick="allclear()">
+
+        </form>       
+    </div>
+    
+    
+
+  
+
+    <script>
+      
+
+        function btn(){
+        var Weight=Number(document.getElementById("weight").value);
+        var Height=Number(document.getElementById("height").value);
+       
+        var height_in_m=Height*12*0.025;
+            var result=(Weight/(height_in_m*height_in_m)).toFixed(2);
+            document.getElementById('bmi_value').value=result;
+            
+
+        if(result<18.5){
+            document.getElementById("Result").innerHTML="Underweight BMI"
+        }else if(result>=18.5 && result<=24.5){
+            document.getElementById("Result").innerHTML="Normal BMI"
+        }else if(result>=25 && result<=29.9){
+            document.getElementById("Result").innerHTML="Overweight BMI"
+        }else if(result>=30 && result<=39.9){
+            document.getElementById("Result").innerHTML="Obese BMI"
+        }else{
+            document.getElementById("Result").innerHTML="Error!!!"
+        }
+        }
+
+
+        function allclear(){
+            document.getElementById('Form').reset();    
+        }
+    </script>
+  
+    
+</body>
+</html>

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechMobo</title>
+    <link rel="icon" href="./Images/1.png">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            background: #f2f2f2;
+        }
+        nav{
+            background: #1b1b1b;
+        }
+        nav:after{
+            content: '';
+            clear: both;
+            display: table;
+
+        }
+        nav .logo{
+            float: left;
+            color: white ;
+            font-size: 27px;
+            font-weight: 600;
+            line-height: 70px;
+            padding-left: 60px;
+        }
+        nav ul{
+            float: right;
+            list-style: none;
+            margin-right: 40px;
+            position: relative;
+
+        }
+        nav ul li{
+            /* float: left; */
+            display: inline-block;
+            background: #1b1b1b;;
+            margin: 0 5px;
+        }
+        nav ul li a{
+            color: white;
+            text-decoration: none;
+            line-height: 70px;
+            font-size: 18px;
+            padding: 9px 15px;
+        }
+        nav ul li a:hover{
+            border-radius: 5px;
+            color: cyan;
+            box-shadow: 0 0 5px #33ffff,
+                        0 0 5px #66ffff;
+        }
+        nav ul ul li a:hover{
+            color: cyan;
+            box-shadow: none;
+        }
+        nav ul ul{
+            position: absolute;
+            top: 90px;
+            border-top: 3px solid cyan;
+            opacity: 0;
+            visibility: hidden;
+            transition: top .3s;
+        }
+        nav ul li:hover >ul{
+            top: 70px;
+            opacity: 1;
+            visibility: visible;
+        }
+        nav ul ul li{
+            position: relative;
+            margin: 0px;
+            width: 150px;
+            float: none;
+            display: list-item;
+            border-bottom: 1px solid rgba(0,0,0,0.3);
+        }
+        nav ul ul li a{
+            line-height: 50px;
+
+        }
+        h1{
+            padding:50px 50%;
+        }
+       
+
+/* Body CSS  */
+
+        .paragraph{
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          color:black;       
+          height:20vh;
+          padding: 8px 0px;
+          margin-bottom:10px;
+          box-shadow:0 0 20px black;
+       }
+       
+
+       .box{
+         border:5px solid black;
+         text-align:center;
+         padding:20px;
+       }
+
+
+       .card-group{
+           margin: auto;
+           display:flex;
+           justify-content: center;
+           flex-wrap: wrap;
+          
+         
+           
+       }
+       .card{
+           background: white;
+           width: 270px;
+           height: fit-content;
+           margin: 10px;
+           border-radius: 5px;
+           transition:all 1s ease-out 0.2s;
+           padding:5px;
+         
+       }
+
+       .card:hover{
+           background: white;
+           box-shadow:0 0 30px black;
+           width: 270px;
+           height: fit-content;
+           margin: 10px;
+           border-radius: 5px;
+       }
+       .card-img-top{
+           background-color: white;
+           height:240px;
+           margin-bottom:15px;
+           width:100%;
+           justify-content: center;
+           border-radius: 5px;
+          
+           
+       }
+       .card-body{
+         text-align:center;
+           margin:12px;
+       }
+
+       .card-title{
+         font-size:25px;
+         margin-bottom:10px;
+       }
+
+       .card-text{
+         font-size:15px;
+         font-family:500;
+         padding:10px;
+        
+       }
+
+       a{
+         text-decoration:none;    
+       }
+      
+    </style>
+
+    
+</head>
+<body>
+  <!-- Navbar -->
+
+    <nav>
+        <div class="title_part">
+            <div class="logo">TechMobo</div>
+        </div>
+        
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Team</a></li>
+            <li>
+                <a href="#">Mobiles +</a>
+                <ul>
+                    <li><a href="Redmi.php">Redmi</a></li>
+                    <li><a href="Samsung.php">Samsung</a></li>
+                    <li><a href="Oppo.php">Oppo</a></li>
+                    <li><a href="Vivo.php">Vivo</a></li>
+                    <li><a href="Motorolla.php">Motorolla</a></li>
+                    <li><a href="Micromax.php">Micromax</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- BODY -->
+
+    <div class="paragraph">
+        <div class="box">
+        <h2>TechMobo-The full specification of android mobiles in NEPAL....</h2>
+  
+        </div>
+         
+      </div>
+  
+  
+    <div class="card-group">
+    <div class="card">
+      <img src="./Images/2.png" class="card-img-top" alt="#" >
+      <div class="card-body">
+        <h5 class="card-title">Redmi Note 8 Pro</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <a href="#" class="btn btn-primary">More About Redmi</a>
+      </div>
+  
+  
+    </div>
+    <div class="card" >
+      <img src="./Images/samsung.png" class="card-img-top" alt="#" >
+      <div class="card-body">
+        <h5 class="card-title">Samsung S22 Ultra</h5>
+        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">More About Samsung</a>
+      </div>
+    </div>
+  
+  
+    <div class="card" >
+      <img src="./Images/oppo.jpg" class="card-img-top" alt="#" >
+      <div class="card-body">
+        <h5 class="card-title">Oppo F19 Pro</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        <a href="#" class="btn btn-primary">More About Oppo</a>
+      </div>
+    </div>
+  
+  
+    <div class="card" >
+      <img src="./Images/iphone.jpg"card-img-top" alt="#" >
+      <div class="card-body">
+        <h5 class="card-title">Iphone</h5>
+        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+        <a href="#" class="btn btn-primary">More About IPHONE</a>
+      </div>
+    </div>
+
+  </div>
+    
+</body>
+</html>

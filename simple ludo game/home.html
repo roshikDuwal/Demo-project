@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUDO GAME</title>
+</head>
+<style>
+    body{
+        background-color: bisque;
+        display:flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding: 30px;
+    }
+
+    h1{
+        font-size: 40px;
+        font-weight: 700;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .container{
+        background-color: azure;
+        padding: 30px;
+        border-radius: 10px;
+        width:fit-content;
+        margin: 30px;
+    }
+
+    .body-container{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        margin: 5px 20px;
+    }
+
+    .left-side{
+        margin: 1em 5em ;
+        font-size: 20px;
+        font-family:  monospace;
+    }
+
+    .right-side{
+        margin: 1em 5em;
+        font-size: 20px;
+        font-family:  monospace;
+    }
+
+    #btn_click{
+        font-size: 30px;
+        font-weight: 500;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        padding: 5px 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        
+    }
+
+
+</style>
+<body>
+    <div class="container">
+        <h1 id="header">Play Game</h1>
+        <div class="body-container">
+            <section class="left-side">
+                <p>Player1</p>
+                <img src="./Images/d1.jpg" id="check1" height="200" width="200">
+            </section>
+
+            <section class="right-side">
+                <p>Player2</p>
+                <img src="./Images/d2.jpg" id="check2" height="200" width="200">
+            </section>
+        </div>
+
+        <Button id="btn_click" onclick="diceclick()">Click</Button>
+    </div>
+
+    <script>
+        const diceclick=()=>{
+        const player1=Math.floor((Math.random()*6)+1);
+        const player1dice=`./Images/d${player1}.jpg`;
+        document.getElementById('check1').setAttribute('src',player1dice);
+
+        const player2=Math.floor((Math.random()*6)+1);
+        const player2dice=`./Images/d${player2}.jpg`;
+        document.getElementById('check2').setAttribute('src',player2dice);
+        
+
+        if(player1>player2){
+            document.getElementById('header').innerHTML="Player One Won!!";
+
+        }else if(player2>player1){
+            document.getElementById('header').innerHTML="Player Two Won!!";
+
+        }else{
+            document.getElementById('header').innerHTML="Draw!!";
+
+        }
+    }
+    </script>
+    
+</body>
+</html>
